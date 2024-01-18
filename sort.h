@@ -18,13 +18,12 @@ typedef struct listint_s
     struct listint_s *next;
 } listint_t;
 
-// Printing helper functions
+/* Printing helper functions */
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
-// Function to swap two integers
+/* Function to swap two integers */
 void swap(int *xp, int *yp);
-
-// Function to perform Bubble Sort on an array of integers
+/* Function to perform Bubble Sort on an array of integers */
 void bubble_sort(int *array, size_t size);
 
 #endif /* SORT_H */
