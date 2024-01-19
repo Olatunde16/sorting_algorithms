@@ -39,10 +39,11 @@ void insertion_sort_list(listint_t **list)
                 return;
 
         listint_t *current = (*list)->next;
-
+	listint_t *temp;
+	
         while (current != NULL)
         {
-                listint_t *temp = current->prev;
+                *temp = current->prev;
 
                 while (temp != NULL && temp->n > current->n)
                 {
