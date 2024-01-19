@@ -23,7 +23,7 @@ typedef struct listint_s
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 /* Function to swap two integers */
-void swap_ints(int *xp, int *yp)
+void swap_ints(int *xp, int *yp);
 /* Function to perform Bubble Sort on an array of integers */
 void bubble_sort(int *array, size_t size);
 /* Function to swap two nodes in a doubly linked list */
