@@ -71,7 +71,7 @@ void quick_sort_recursive(int *array, size_t low, size_t high)
 		pivot = array[high];
 		i = low - 1;
 		
-		for (size_t j = low; j <= high - 1; j++)
+		for (j = low; j <= high - 1; j++)
 		{
 			if (array[j] < pivot) 
 			{
