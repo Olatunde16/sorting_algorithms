@@ -26,5 +26,8 @@ void print_list(const listint_t *list);
 void swap(int *xp, int *yp);
 /* Function to perform Bubble Sort on an array of integers */
 void bubble_sort(int *array, size_t size);
-
+/* Function to swap two nodes in a doubly linked list */
+void swap_nodes(listint_t **list, listint_t *node1, listint_t *node2);
+/* Function to perform Insertion Sort on a doubly linked list */
+void insertion_sort_list(listint_t **list);
 #endif /* SORT_H */
