@@ -2,17 +2,18 @@
 #include <stdio.h>
 
 /**
- * swap_ints - Swap two integers in an array.
- * @a: The first integer to swap.
- * @b: The second integer to swap.
+ * swap - Swap two integers in an array.
+ * @xp: The first integer to swap.
+ * @yp: The second integer to swap.
  */
-void swap_ints(int *a, int *b)
+
+void swap(int *xp, int *yp)
 {
 	int tmp;
 
-	tmp = *a;
-	*a = *b;
-	*b = tmp;
+	tmp = *xp;
+	*xp = *yp;
+	*yp = tmp;
 }
 
 /**
