@@ -49,4 +49,6 @@ void quick_sort_recursive(int *array, size_t size, int left, int right);
 /* Function that calls the recursive function quick_sort_recursive to sort the entire array */
 void quick_sort(int *array, size_t size);
 
+/* Function that sorts an array of integers in ascending order using the Shell sort algorithm, using the Knuth sequence */
+void shell_sort(int *array, size_t size);
 #endif /* SORT_H */
