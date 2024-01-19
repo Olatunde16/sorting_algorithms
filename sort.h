@@ -43,9 +43,9 @@ void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
 
 /* Function that implements the Lomuto partition for Quick Sort */
-size_t lomuto_partition(int *array, size_t low, size_t high);
+int lomuto_partition(int *array, size_t size, int left, int right);
 /* Function that implements the Quick Sort algorithm using the Lomuto partition scheme */
-void quick_sort_recursive(int *array, size_t low, size_t high);
+void quick_sort_recursive(int *array, size_t size, int left, int right);
 /* Function that calls the recursive function quick_sort_recursive to sort the entire array */
 void quick_sort(int *array, size_t size);
 
