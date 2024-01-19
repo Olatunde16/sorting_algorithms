@@ -28,14 +28,25 @@ void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 
 /* Sorting Algorithms Functions */
+
 /* Function to swap two integers */
 void swap_ints(int *a, int *b);
 /* Function to perform Bubble Sort on an array of integers */
 void bubble_sort(int *array, size_t size);
+
 /* Function to swap two nodes in a doubly linked list */
 void swap_nodes(listint_t **list, listint_t **node1, listint_t *node2);
 /* Function to perform Insertion Sort on a doubly linked list */
 void insertion_sort_list(listint_t **list);
+
 /* Function to perform Selection Sort on an array of integers */
 void selection_sort(int *array, size_t size);
+
+/* Function that implements the Lomuto partition for Quick Sort */
+size_t lomuto_partition(int *array, size_t low, size_t high);
+/* Function that implements the Quick Sort algorithm using the Lomuto partition scheme */
+void quick_sort_recursive(int *array, size_t low, size_t high);
+/* Function that calls the recursive function quick_sort_recursive to sort the entire array */
+void quick_sort(int *array, size_t size);
+
 #endif /* SORT_H */
