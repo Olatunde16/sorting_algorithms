@@ -1,24 +1,24 @@
 #include "sort.h"
 #include <stdio.h>
 
-void swap_ints(int *a, int *b);
+void swap(int *xp, int *yp);
 int lomuto_partition(int *array, size_t size, int left, int right);
 void quick_sort_recursive(int *array, size_t size, int left, int right);
 void quick_sort(int *array, size_t size);
 
 /**
- * swap_ints - Swap two integers in an array.
- * @a: The first integer to swap.
- * @b: The second integer to swap.
+ * swap - Swap two integers in an array.
+ * @xp: The first integer to swap.
+ * @yp: The second integer to swap.
  */
 
-void swap_ints(int *a, int *b)
+void swap(int *xp, int *yp)
 {
 	int tmp;
 
-	tmp = *a;
-	*a = *b;
-	*b = tmp;
+	tmp = *xp;
+	*xp = *yp;
+	*yp = tmp;
 }
 
 /**
@@ -43,7 +43,7 @@ int lomuto_partition(int *array, size_t size, int left, int right)
 		{
 			if (above < below)
 			{
-				swap_ints(array + below, array + above);
+				swap(array + below, array + above);
 				print_array(array, size);
 			}
 			above++;
@@ -52,7 +52,7 @@ int lomuto_partition(int *array, size_t size, int left, int right)
 
 	if (array[above] > *pivot)
 	{
-		swap_ints(array + above, pivot);
+		swap(array + above, pivot);
 		print_array(array, size);
 	}
 
