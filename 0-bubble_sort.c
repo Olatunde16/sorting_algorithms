@@ -1,12 +1,12 @@
 #include "sort.h"
 
 /**
- * swap - Swaps the values of two integer pointers.
+ * swap_ints - Swaps the values of two integer pointers.
  * @xp: Pointer to the first integer.
  * @yp: Pointer to the second integer.
  */
 
-void swap(int *xp, int *yp)
+void swap_ints(int *xp, int *yp)
 {
 	int temp; 
 	
