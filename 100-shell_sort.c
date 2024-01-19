@@ -12,37 +12,25 @@
 
 void shell_sort(int *array, size_t size)
 {
-	int interval, n;
-	size_t i, outer, inner;
+	size_t gap, i, j;
 
-	interval = 1;
+	if (array == NULL || size < 2)
+		return;
 
-	while (interval <= size / 3)
-		interval = interval * 3 + 1;
+	for (gap = 1; gap < (size / 3);)
+		gap = gap * 3 + 1;
 
-	while (interval > 0)
+	for (; gap >= 1; gap /= 3)
 	{
-		printf("%d ", interval);
-
-		for (i = 0; i < size; ++i)
-			printf("%d ", array[i]);
-
-		printf("\n");
-
-		for (outer = interval; outer < size, ++outer)
+		for (i = gap; i < size; i++)
 		{
-			n = array[outer];
-			inner = outer;
-
-			while (inner >= interval && array[inner - interval] > n)
+			j = i;
+			while (j >= gap && array[j - gap] > array[j])
 			{
-				array[inner] = array[inner - interval];
-				inner -= interval;
+				swap_ints(array + j, array + (j - gap));
+				j -= gap;
 			}
-
-			array[inner] = n;
 		}
-
-		interval = (interval - 1) / 3;
+		print_array(array, size);
 	}
 }
