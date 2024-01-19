@@ -5,6 +5,10 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+/* Comparison direction macros for bitonic sort */
+#define UP 0
+#define DOWN 1
+
 /**
  * struct listint_s - Doubly linked list node
  *
@@ -22,6 +26,8 @@ typedef struct listint_s
 /* Printing helper functions */
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
+
+/* Sorting Algorithms Functions */
 /* Function to swap two integers */
 void swap_ints(int *xp, int *yp);
 /* Function to perform Bubble Sort on an array of integers */
