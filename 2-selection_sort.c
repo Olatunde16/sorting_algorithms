@@ -6,6 +6,7 @@
  * @xp: The first integer to swap.
  * @yp: The second integer to swap.
  */
+
 void swap(int *xp, int *yp)
 {
 	int tmp;
