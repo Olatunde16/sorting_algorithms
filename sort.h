@@ -29,7 +29,7 @@ void print_list(const listint_t *list);
 
 /* Sorting Algorithms Functions */
 /* Function to swap two integers */
-void swap_ints(int *xp, int *yp);
+void swap_ints(int *a, int *b)
 /* Function to perform Bubble Sort on an array of integers */
 void bubble_sort(int *array, size_t size);
 /* Function to swap two nodes in a doubly linked list */
