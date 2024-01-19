@@ -66,7 +66,7 @@ void quick_sort_recursive(int *array, size_t low, size_t high)
 	if (low < high) 
 	{
 		int pivot;
-		size_t i, j;
+		size_t i, j, k;
 		
 		pivot = array[high];
 		i = low - 1;
@@ -84,7 +84,7 @@ void quick_sort_recursive(int *array, size_t low, size_t high)
 		
 		/* Prints the array after each partition */
 		printf("Partition: ");
-		for (size_t k = low; k <= high; k++) 
+		for (k = low; k <= high; k++) 
 			printf("%d ", array[k]);
 		
 		printf("\n");
