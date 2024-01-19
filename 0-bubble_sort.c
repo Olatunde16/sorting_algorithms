@@ -1,18 +1,17 @@
 #include "sort.h"
 
 /**
- * swap_ints - Swaps the values of two integer pointers.
- * @xp: Pointer to the first integer.
- * @yp: Pointer to the second integer.
+ * swap_ints - Swap two integers in an array.
+ * @a: The first integer to swap.
+ * @b: The second integer to swap.
  */
-
-void swap_ints(int *xp, int *yp)
+void swap_ints(int *a, int *b)
 {
-	int temp; 
-	
-	temp = *xp;
-	*xp = *yp;
-	*yp = temp;
+	int tmp;
+
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 }
 
 /**
