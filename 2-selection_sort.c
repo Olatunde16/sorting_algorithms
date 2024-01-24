@@ -2,18 +2,18 @@
 #include "sort.h"
 
 /**
- * swap - Swap two integers in an array.
- * @xp: The first integer to swap.
- * @yp: The second integer to swap.
+ * swap_ints - Swap two integers in an array.
+ * @a: The first integer to swap.
+ * @b: The second integer to swap.
  */
 
-void swap(int *xp, int *yp)
+void swap_ints(int *a, int *b)
 {
 	int tmp;
 
-	tmp = *xp;
-	*xp = *yp;
-	*yp = tmp;
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 }
 
 /**
@@ -40,7 +40,7 @@ void selection_sort(int *array, size_t size)
 
 		if ((array + i) != min_index)
 		{
-			swap(array + i, min_index);
+			swap_ints(array + i, min_index);
 			print_array(array, size);
 		}
 	}
